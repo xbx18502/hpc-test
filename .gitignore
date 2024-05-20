@@ -1,0 +1,8 @@
+*.out
+*.elf
+
+# Ignore all hidden files
+.*
+
+# Except for this .gitignore file
+!.gitignore
