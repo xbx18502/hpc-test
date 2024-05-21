@@ -1,0 +1,5 @@
+args = 3000
+max threads = 16
+serial Time taken: 69.1596 seconds
+/var/spool/slurmd/job04795/slurm_script: line 12: 350393 Killed                  ./matmul_omp_3.elf $N
+Tue May 21 06:37:46 PM JST 2024

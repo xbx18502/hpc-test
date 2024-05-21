@@ -1,0 +1,12 @@
+args = 2000
+max threads = 16
+serial Time taken: 11.1333 seconds
+parallel_0 Time taken: 1.17699 seconds
+is there error?  :0
+parallel_1 Time taken: 1.1796 seconds
+is there error?  :0
+parallel_2 Time taken: 1.18787 seconds
+is there error?  :0
+parallel_3 Time taken: 1.41423 seconds
+is there error?  :0
+Tue May 21 05:59:43 PM JST 2024

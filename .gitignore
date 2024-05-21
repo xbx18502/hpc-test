@@ -1,4 +1,4 @@
-*.out
+# ignore executable
 *.elf
 
 # Ignore all hidden files

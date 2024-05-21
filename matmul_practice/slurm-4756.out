@@ -1,0 +1,11 @@
+photon
+Mon May 20 10:12:41 AM JST 2024
+Loading tbb version 2021.8.0
+
+Loading compiler/2024.0.2
+  Loading requirement: tbb/2021.8.0 compiler-rt/latest oclfpga/latest
+
+ERROR: Unable to locate a modulefile for 'mpi2021.11'
+/var/spool/slurmd/job04756/slurm_script: line 13: mpiexec.hydra: command not found
+Mon May 20 10:12:41 AM JST 2024
+/var/spool/slurmd/job04756/slurm_script: line 16: $: command not found

@@ -1,0 +1,21 @@
+size = 10
+max threads = 16
+serial Time taken: 1.35321e-06 seconds
+parallel_0 Time taken: 5.56139e-06 seconds
+is there error?  :0
+size = 100
+max threads = 16
+serial Time taken: 0.000711075 seconds
+parallel_0 Time taken: 7.42609e-05 seconds
+is there error?  :0
+size = 1000
+max threads = 16
+serial Time taken: 0.857944 seconds
+parallel_0 Time taken: 0.0576345 seconds
+is there error?  :0
+size = 5000
+max threads = 16
+serial Time taken: 497.03 seconds
+parallel_0 Time taken: 28.9952 seconds
+is there error?  :0
+Tue May 21 08:22:06 PM JST 2024

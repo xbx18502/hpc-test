@@ -1,0 +1,15 @@
++ hostname
+photon
++ module load nvhpc/23.3
++ _module_raw load nvhpc/23.3
+++ /usr/bin/tclsh8.6 /usr/lib/x86_64-linux-gnu/modulecmd.tcl bash load nvhpc/23.3
++ eval
++ _mlstatus=0
++ return 0
++ ./matmul_acc.elf
+size = 100, time :0.082563 second
+size = 1000, time :1.485768 second
+size = 2000, time :9.170672 second
+size = 3000, time :26.070265 second
++ date
+Tue May 21 09:53:27 PM JST 2024

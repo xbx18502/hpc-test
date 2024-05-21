@@ -1,0 +1,12 @@
+args = 100
+max threads = 4
+serial Time taken: 0.000881268 seconds
+parallel_0 Time taken: 0.000660943 seconds
+is there error?  :0
+parallel_1 Time taken: 0.000410442 seconds
+is there error?  :0
+parallel_2 Time taken: 0.000304793 seconds
+is there error?  :0
+parallel_3 Time taken: 0.00240323 seconds
+is there error?  :0
+Tue May 21 05:17:22 PM JST 2024
