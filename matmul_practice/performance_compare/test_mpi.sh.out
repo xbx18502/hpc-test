@@ -1,0 +1,33 @@
+photon
+Mon May 27 08:06:09 PM JST 2024
+Loading tbb version 2021.8.0
+
+Loading compiler/2024.0.2
+  Loading requirement: tbb/2021.8.0 compiler-rt/latest oclfpga/latest
+
+Loading modulefiles version 2021.11
+[0] MPI startup(): Intel(R) MPI Library, Version 2021.11  Build 20231005 (id: 74c4a23)
+[0] MPI startup(): Copyright (C) 2003-2023 Intel Corporation.  All rights reserved.
+[0] MPI startup(): library kind: release
+[0] MPI startup(): libfabric version: 1.18.1-impi
+[0] MPI startup(): libfabric provider: tcp
+[0] MPI startup(): File "" not found
+[0] MPI startup(): Load tuning file: "/home/share/intel/oneapi/mpi/2021.11/opt/mpi/etc/tuning_generic_shm-ofi.dat"
+[0] MPI startup(): ===== Nic pinning on photon =====
+[0] MPI startup(): Rank	Pin nic
+[0] MPI startup(): 0	enp3s0
+[0] MPI startup(): 1	enp3s0
+[0] MPI startup(): Rank    Pid      Node name  Pin cpu
+[0] MPI startup(): 0       414486   photon     {0,1,2,3,4,5,12,13,14,15,16,17}
+[0] MPI startup(): 1       414487   photon     {6,7,8,9,10,11,18,19,20,21,22,23}
+[0] MPI startup(): I_MPI_ROOT=/home/share/intel/oneapi/mpi/2021.11
+[0] MPI startup(): I_MPI_BIND_WIN_ALLOCATE=localalloc
+[0] MPI startup(): I_MPI_HYDRA_TOPOLIB=hwloc
+[0] MPI startup(): I_MPI_HYDRA_BOOTSTRAP=ssh
+[0] MPI startup(): I_MPI_RETURN_WIN_MEM_NUMA=-1
+[0] MPI startup(): I_MPI_INTERNAL_MEM_POLICY=default
+[0] MPI startup(): I_MPI_DEBUG=5
+Hello, parallel world 1 / 2 : photon : 0 / 2
+Hello, parallel world 1 / 2 : photon : 1 / 2
+Hello, parallel world 0 / 2 : photon : 0 / 2
+Hello, parallel world 0 / 2 : photon : 1 / 2
