@@ -112,7 +112,7 @@ int main() {
 
 /*
  gcc -fopenmp -O3 matmul_omp.cpp -o  matmul_omp.elf
-
+gcc -gp -fopenmp -O0 matmul_omp.cpp -o  matmul_omp.elf
 */
 /*
 #!/bin/bash
