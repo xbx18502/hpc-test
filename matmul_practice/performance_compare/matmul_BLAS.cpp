@@ -3,8 +3,9 @@
 #include <stdlib.h>
 #include <time.h>
 #include <chrono>
-int main() {
-    int n = 3000;
+int main(int argc, char **argv) {
+    int n  = strtol(argv[1], NULL, 10);  // size of array
+    printf("size = %d\n",n);
     
     double *A = (double *)malloc(n * n * sizeof(double));
     double *B = (double *)malloc(n * n * sizeof(double));
@@ -36,15 +37,14 @@ int main() {
 
 
     printf("Size of matrix = %d, time = %f\n\n",n,time_spent);
-    printf("C[10][20] = %f, C[20][30] = %f, C[30][40] = %f, C[40][50] = %f"
-    , C[10*n+20],C[20*n+30],C[30*n+40],C[40*n+50]);
+    
     // print part of matrix
-    // for (int i = 0; i < 10; i++) {
-    //     for (int j = 0; j < 10; j++) {
-    //         printf("%f ", C[i * n + j]);
-    //     }
-    //     printf("\n");
-    // }
+    for (int i = 0; i < 10; i++) {
+        for (int j = 0; j < 10; j++) {
+            printf("%f ", C[i * n + j]);
+        }
+        printf("\n");
+    }
 
     free(A);
     free(B);

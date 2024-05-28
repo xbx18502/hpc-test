@@ -6,11 +6,14 @@
 //#define N 1200  // Matrix size, ensure it's divisible by number of MPI processes
 
 // Function to fill a matrix with data
-void fill_matrix(double *matrix, int rows, int cols) {
-    for (int i = 0; i < rows * cols; i++) {
-        matrix[i] = (double)(i % 100);  // Simple sequential fill for example
-    }
-}
+// void fill_matrix(double *matrix, int rows, int cols) {
+//     for (int i = 0; i < rows; i++) {
+//         for (int j = 0; j < cols; j++) {
+//             A[i*cols+j] = i + j;
+//             B[i*cols+j] = i - j;
+//         }
+//     }
+// }
 
 // Matrix multiplication using OpenMP
 void matrix_multiply(double *A, double *B, double *C, int rowsA, int colsA, int colsB) {
@@ -27,8 +30,10 @@ void matrix_multiply(double *A, double *B, double *C, int rowsA, int colsA, int 
 }
 
 int main(int argc, char **argv) {
+    int n  = strtol(argv[1], NULL, 10);  // size of array
+    printf("size = %d\n",n);
     int rank, size;
-    int N = 3000;
+    int N = n;
     MPI_Init(&argc, &argv);
     MPI_Comm_rank(MPI_COMM_WORLD, &rank);
     MPI_Comm_size(MPI_COMM_WORLD, &size);
@@ -45,9 +50,17 @@ int main(int argc, char **argv) {
     if (rank == 0) {
         A = (double *)malloc(N * N * sizeof(double));
         C = (double *)malloc(N * N * sizeof(double));
-        fill_matrix(A, N, N);
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < N; j++) {
+                A[i*N+j] = i + j;
+            }
+        }
     }
-    fill_matrix(B, N, N);
+    for (int i = 0; i < N; i++) {
+            for (int j = 0; j < N; j++) {
+                B[i*N+j] = i - j;
+            }
+        }
     double startTime = omp_get_wtime();
     // Scatter rows of matrix A to different processes
     MPI_Scatter(A, rows_per_process * N, MPI_DOUBLE, subA, rows_per_process * N, MPI_DOUBLE, 0, MPI_COMM_WORLD);
@@ -84,5 +97,8 @@ mpiicx -qopenmp matmul_omp_mpi.c -o matmul_omp_mpi.elf
 
 
 mpiicx -O0 -pg -qopenmp matmul_omp_mpi.c -o matmul_omp_mpi.elf
+
+./matmul_omp_mpi.elf
+gprof matmul_omp_mpi.elf gmon.out > analysis.txt
 
 */

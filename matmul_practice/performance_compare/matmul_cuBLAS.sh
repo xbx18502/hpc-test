@@ -5,6 +5,6 @@
 #SBATCH -N 1
 #SBATCH -c 16
 hostname
-date
 n=7000
-./matmul_BLAS.elf $n
+./matmul_cuBLAS.elf $n
+date

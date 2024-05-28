@@ -10,6 +10,6 @@ export OMP_NUM_THREADS=16
 export I_MPI_DEBUG=5
 export I_MPI_HYDRA_BOOTSTRAP=ssh
 
-
-./matmul_omp.elf 
+N=7000
+./matmul_omp.elf $N
 

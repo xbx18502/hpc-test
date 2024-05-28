@@ -66,8 +66,10 @@ bool compare(double** C, double** D, int n){
 
 }
 
-int main() {
-    int n = 3000;  // size of array
+int main(int argc, char **argv) {
+    
+    int n  = strtol(argv[1], NULL, 10);  // size of array
+    printf("size = %d\n",n);
     double **a, **b, **c, **d;
 
     // allocate matrix
@@ -92,15 +94,14 @@ int main() {
 
     //bool IsCorrect = compare(c,d,n);
     printf("Size of matrix = %d, time = %f\n\n",n,endTime-startTime);
-    printf("C[10][20] = %f, C[20][30] = %f, C[30][40] = %f, C[40][50] = %f"
-    , c[10][20],c[20][30],c[30][40],c[40][50]);
-    // print part of matrix
-    // for (int i = 0; i < 10; i++) {  // print the first 10 rows and columns
-    //     for (int j = 0; j < 10; j++) {
-    //         printf("%lf ", c[i][j]);
-    //     }
-    //     printf("\n");
-    // }
+    
+    //print part of matrix
+    for (int i = 0; i < 10; i++) {  // print the first 10 rows and columns
+        for (int j = 0; j < 10; j++) {
+            printf("%lf ", c[i][j]);
+        }
+        printf("\n");
+    }
 
     // free memory
     freeMatrix(a, n);
@@ -112,7 +113,7 @@ int main() {
 
 /*
  gcc -fopenmp -O3 matmul_omp.cpp -o  matmul_omp.elf
-gcc -gp -fopenmp -O0 matmul_omp.cpp -o  matmul_omp.elf
+g++ -pg -fopenmp -O0 matmul_omp.cpp -o  matmul_omp.elf
 */
 /*
 #!/bin/bash

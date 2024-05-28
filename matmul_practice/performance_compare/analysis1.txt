@@ -1,10 +1,12 @@
 Flat profile:
 
 Each sample counts as 0.01 seconds.
+ no time accumulated
+
   %   cumulative   self              self     total           
  time   seconds   seconds    calls  Ts/call  Ts/call  name    
-100.00    419.39   419.39                             main
-  0.00    419.39     0.00        1     0.00     0.00  matrix_multiply
+  0.00      0.00     0.00        1     0.00     0.00  multiplyMatrices
+  0.00      0.00     0.00        1     0.00     0.00  run
 
  %         the percentage of the total running time of the
 time       program used by this function.
@@ -42,15 +44,15 @@ notice and this notice are preserved.
 		     Call graph (explanation follows)
 
 
-granularity: each sample hit covers 4 byte(s) for 0.00% of 419.39 seconds
+granularity: each sample hit covers 4 byte(s) no time propagated
 
 index % time    self  children    called     name
-                                                 <spontaneous>
-[1]    100.0  419.39    0.00                 main [1]
-                0.00    0.00       1/1           matrix_multiply [2]
+                0.00    0.00       1/1           run [2]
+[1]      0.0    0.00    0.00       1         multiplyMatrices [1]
 -----------------------------------------------
-                0.00    0.00       1/1           main [1]
-[2]      0.0    0.00    0.00       1         matrix_multiply [2]
+                0.00    0.00       1/1           main [9]
+[2]      0.0    0.00    0.00       1         run [2]
+                0.00    0.00       1/1           multiplyMatrices [1]
 -----------------------------------------------
 
  This table describes the call tree of the program, and was sorted by
@@ -143,4 +145,4 @@ notice and this notice are preserved.
 
 Index by function name
 
-   [1] main                    [2] matrix_multiply
+   [1] multiplyMatrices        [2] run
