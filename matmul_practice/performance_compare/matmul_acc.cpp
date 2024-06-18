@@ -15,7 +15,7 @@ void initializeMatrix(double* mat, int rows, int cols) {
 }
 
 // Function to perform matrix multiplication using OpenACC
-void multiplyMatrices(double* A, double* B, double* C, int numRowsA, int numColsA, int numColsB) {
+void multiplyMatrices_0(double* A, double* B, double* C, int numRowsA, int numColsA, int numColsB) {
     #pragma acc data copyin(A[0:numRowsA*numColsA], B[0:numColsA*numColsB]) copyout(C[0:numRowsA*numColsB])
     {
         #pragma acc kernels
@@ -30,7 +30,22 @@ void multiplyMatrices(double* A, double* B, double* C, int numRowsA, int numCols
         }
     }
 }
-
+// Function to perform matrix multiplication using OpenACC
+void multiplyMatrices(double* A, double* B, double* C, int numRowsA, int numColsA, int numColsB) {
+    #pragma acc data copyin(A[0:numRowsA*numColsA], B[0:numColsA*numColsB]) copyout(C[0:numRowsA*numColsB])
+    {
+        #pragma acc parallel loop 
+        for (int i = 0; i < numRowsA; i++) {
+            for (int j = 0; j < numColsB; j++) {
+                double sum = 0.0;
+                for (int k = 0; k < numColsA; k++) {
+                    sum += A[i * numColsA + k] * B[k * numColsB + j];
+                }
+                C[i * numColsB + j] = sum;
+            }
+        }
+    }
+}
 void run(int N){
     int numRowsA = N, numColsA = N, numColsB = N;
     double *A = (double*)malloc(numRowsA * numColsA*sizeof(double));

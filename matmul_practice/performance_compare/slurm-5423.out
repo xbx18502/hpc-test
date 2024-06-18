@@ -1,0 +1,1 @@
+vtune: Error: Cannot collect memory bandwidth data. Make sure the sampling driver is installed and enabled on your system. See the Sampling Drivers help topic for more details. Note that memory bandwidth collection is not possible if you are profiling inside a virtualized environment.

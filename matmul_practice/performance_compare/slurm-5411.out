@@ -1,0 +1,68 @@
+photon
+Mon Jun  3 10:31:58 AM JST 2024
+Loading tbb version 2021.8.0
+
+Loading compiler/2024.0.2
+  Loading requirement: tbb/2021.8.0 compiler-rt/latest oclfpga/latest
+
+ERROR: Permission denied on '/home/share/intel/oneapi/modulefiles/mkl/2024.0'
+Loading modulefiles version 2021.11
+/var/spool/slurmd/job05411/slurm_script: line 9: ./sgemm: No such file or directory
+vtune: Warning: Microarchitecture performance insights will not be available. Make sure the sampling driver is installed and enabled on your system.
+vtune: Collection started. To stop the collection, either press CTRL-C or enter from another console window: vtune -r /home/xiao/hpc test/matmul_practice/performance_compare/result_sgemm_5411 -command stop.
+size = 1000
+Size of matrix = 1000, time = 0.191004
+
+332833500.000000 332334000.000000 331834500.000000 331335000.000000 330835500.000000 330336000.000000 329836500.000000 329337000.000000 328837500.000000 328338000.000000 
+333333000.000000 332832500.000000 332332000.000000 331831500.000000 331331000.000000 330830500.000000 330330000.000000 329829500.000000 329329000.000000 328828500.000000 
+333832500.000000 333331000.000000 332829500.000000 332328000.000000 331826500.000000 331325000.000000 330823500.000000 330322000.000000 329820500.000000 329319000.000000 
+334332000.000000 333829500.000000 333327000.000000 332824500.000000 332322000.000000 331819500.000000 331317000.000000 330814500.000000 330312000.000000 329809500.000000 
+334831500.000000 334328000.000000 333824500.000000 333321000.000000 332817500.000000 332314000.000000 331810500.000000 331307000.000000 330803500.000000 330300000.000000 
+335331000.000000 334826500.000000 334322000.000000 333817500.000000 333313000.000000 332808500.000000 332304000.000000 331799500.000000 331295000.000000 330790500.000000 
+335830500.000000 335325000.000000 334819500.000000 334314000.000000 333808500.000000 333303000.000000 332797500.000000 332292000.000000 331786500.000000 331281000.000000 
+336330000.000000 335823500.000000 335317000.000000 334810500.000000 334304000.000000 333797500.000000 333291000.000000 332784500.000000 332278000.000000 331771500.000000 
+336829500.000000 336322000.000000 335814500.000000 335307000.000000 334799500.000000 334292000.000000 333784500.000000 333277000.000000 332769500.000000 332262000.000000 
+337329000.000000 336820500.000000 336312000.000000 335803500.000000 335295000.000000 334786500.000000 334278000.000000 333769500.000000 333261000.000000 332752500.000000 
+vtune: Collection stopped.
+vtune: Using result path `/home/xiao/hpc test/matmul_practice/performance_compare/result_sgemm_5411'
+vtune: Executing actions  0 %                                                  vtune: Executing actions  0 % Finalizing results                               vtune: Executing actions  0 % Finalizing the result                            vtune: Executing actions  0 % Clearing the database                            vtune: Executing actions  7 % Clearing the database                            vtune: Executing actions  7 % Loading raw data to the database                 vtune: Executing actions  7 % Loading 'systemcollector-466269-photon.sc' file  vtune: Executing actions 12 % Loading 'systemcollector-466269-photon.sc' file  vtune: Executing actions 12 % Loading '466269-466274.0.trace' file             vtune: Executing actions 12 % Updating precomputed scalar metrics              vtune: Executing actions 14 % Updating precomputed scalar metrics              vtune: Executing actions 14 % Processing profile metrics and debug information vtune: Executing actions 19 % Processing profile metrics and debug information vtune: Executing actions 19 % Setting data model parameters                    vtune: Executing actions 19 % Resolving module symbols                         vtune: Executing actions 19 % Resolving information for `matmul_omp.elf'       vtune: Executing actions 19 % Resolving information for `libgomp.so.1'         
+vtune: Warning: Cannot locate debugging information for file `/home/xiao/hpc test/matmul_practice/performance_compare/matmul_omp.elf'.
+vtune: Warning: Cannot locate debugging information for file `/lib/x86_64-linux-gnu/libgomp.so.1'.
+vtune: Executing actions 19 % Resolving information for `libc.so.6'            vtune: Executing actions 20 % Resolving information for `libc.so.6'            vtune: Executing actions 20 % Resolving information for `libtpsstool.so'       vtune: Executing actions 21 % Resolving information for `libtpsstool.so'       
+vtune: Warning: Cannot locate debugging information for file `/home/share/intel/oneapi/vtune/2024.0/lib64/libtpsstool.so'.
+vtune: Executing actions 22 % Resolving information for `libtpsstool.so'       vtune: Executing actions 22 % Resolving bottom user stack information          vtune: Executing actions 23 % Resolving bottom user stack information          vtune: Executing actions 23 % Resolving thread name information                vtune: Executing actions 24 % Resolving thread name information                vtune: Executing actions 24 % Resolving call target names for dynamic code     vtune: Executing actions 25 % Resolving call target names for dynamic code     vtune: Executing actions 25 % Resolving interrupt name information             vtune: Executing actions 26 % Resolving interrupt name information             vtune: Executing actions 26 % Processing profile metrics and debug information vtune: Executing actions 28 % Processing profile metrics and debug information vtune: Executing actions 29 % Processing profile metrics and debug information vtune: Executing actions 30 % Processing profile metrics and debug information vtune: Executing actions 30 % Setting data model parameters                    vtune: Executing actions 30 % Precomputing frequently used data                vtune: Executing actions 30 % Precomputing frequently used data                vtune: Executing actions 31 % Precomputing frequently used data                vtune: Executing actions 32 % Precomputing frequently used data                vtune: Executing actions 33 % Precomputing frequently used data                vtune: Executing actions 35 % Precomputing frequently used data                vtune: Executing actions 36 % Precomputing frequently used data                vtune: Executing actions 36 % Updating precomputed scalar metrics              vtune: Executing actions 37 % Updating precomputed scalar metrics              vtune: Executing actions 37 % Discarding redundant overtime data               vtune: Executing actions 39 % Discarding redundant overtime data               vtune: Executing actions 39 % Saving the result                                vtune: Executing actions 41 % Saving the result                                vtune: Executing actions 42 % Saving the result                                vtune: Executing actions 50 % Saving the result                                vtune: Executing actions 50 % Generating a report                              vtune: Executing actions 50 % Setting data model parameters                    vtune: Executing actions 75 % Setting data model parameters                    vtune: Executing actions 75 % Generating a report                              Elapsed Time: 0.205s
+    CPU Time: 4.300s
+        Effective Time: 4.300s
+        Spin Time: 0s
+        Overhead Time: 0s
+    Total Thread Count: 24
+    Paused Time: 0s
+
+Top Hotspots
+Function                  Module          CPU Time  % of CPU Time(%)
+------------------------  --------------  --------  ----------------
+matrixMultiply._omp_fn.0  matmul_omp.elf    4.220s             98.1%
+func@0x20764              libgomp.so.1      0.054s              1.3%
+func@0x205c4              libgomp.so.1      0.016s              0.4%
+main                      matmul_omp.elf    0.010s              0.2%
+Collection and Platform Info
+    Application Command Line: ./matmul_omp.elf "1000" 
+    Operating System: 5.15.0-94-generic DISTRIB_ID=Ubuntu DISTRIB_RELEASE=22.04 DISTRIB_CODENAME=jammy DISTRIB_DESCRIPTION="Ubuntu 22.04.4 LTS"
+    Computer Name: photon
+    Result Size: 3.7 MB 
+    Collection start time: 01:32:00 03/06/2024 UTC
+    Collection stop time: 01:32:01 03/06/2024 UTC
+    Collector Type: User-mode sampling and tracing
+    CPU
+        Name: Unknown
+        Frequency: 3.693 GHz
+        Logical CPU Count: 24
+        Cache Allocation Technology
+            Level 2 capability: not detected
+            Level 3 capability: available
+
+If you want to skip descriptions of detected performance issues in the report,
+enter: vtune -report summary -report-knob show-issues=false -r <my_result_dir>.
+Alternatively, you may view the report in the csv format: vtune -report
+<report_name> -format=csv.
+vtune: Executing actions 100 % Generating a report                             vtune: Executing actions 100 % done                                            

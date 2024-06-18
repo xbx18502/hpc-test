@@ -6,5 +6,9 @@
 #SBATCH -c 16
 hostname
 date
-n=7000
-./matmul_BLAS.elf $n
+module load compiler/2023.0.0
+module load mkl/2023.0.0
+#icpx -qmkl -O -o matmul_BLAS.elf matmul_BLAS.cpp
+
+
+./matmul_BLAS.elf 1000

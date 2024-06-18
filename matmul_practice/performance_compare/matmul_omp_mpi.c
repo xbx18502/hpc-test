@@ -95,6 +95,7 @@ int main(int argc, char **argv) {
 module load compiler/2024.0.2 mpi/2021.11
 mpiicx -qopenmp matmul_omp_mpi.c -o matmul_omp_mpi.elf
 
+mpiicx -g -qopenmp matmul_omp_mpi.c -o matmul_omp_mpi.elf
 
 mpiicx -O0 -pg -qopenmp matmul_omp_mpi.c -o matmul_omp_mpi.elf
 

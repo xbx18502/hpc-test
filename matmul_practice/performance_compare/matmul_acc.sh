@@ -7,6 +7,6 @@ hostname
 #. /etc/profile.d/modules.sh
 module load nvhpc/23.3
 #nvidia-smi
-n=1000
-./matmul_acc.elf $n
+
+./matmul_acc.elf $1
 date

@@ -1,10 +1,11 @@
-#include <cblas.h>
+//#include <cblas.h>   //if use openblas
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 #include <chrono>
+#include <mkl.h> //if use mkl blas
 int main(int argc, char **argv) {
-    int n  = strtol(argv[1], NULL, 10);  // size of array
+    long long int n  = strtol(argv[1], NULL, 10);  // size of array
     printf("size = %d\n",n);
     
     double *A = (double *)malloc(n * n * sizeof(double));
@@ -35,8 +36,8 @@ int main(int argc, char **argv) {
     std::chrono::duration<double> elapsed_seconds = end - start;
     double time_spent = elapsed_seconds.count();
 
-
-    printf("Size of matrix = %d, time = %f\n\n",n,time_spent);
+    long long int timesOfOperation = n*n*(2*n-1);
+    printf("Size of matrix = %d, time = %f, TFLOPS = %f\n\n",n,time_spent, timesOfOperation/time_spent/1e12);
     
     // print part of matrix
     for (int i = 0; i < 10; i++) {
@@ -58,6 +59,12 @@ OpenBLAS
 /*
 
 g++ -O3 -o matmul_BLAS.elf matmul_BLAS.cpp -lopenblas
+
+module compiler/2023.0.0
+module load mkl/2023.0.0
+icpx -qmkl -O -o matmul_BLAS.elf matmul_BLAS.cpp
+module purge
+
 */
 /*
 #!/bin/bash

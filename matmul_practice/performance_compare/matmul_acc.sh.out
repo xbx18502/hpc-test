@@ -3,22 +3,56 @@ fire.lab.exth.net
 + module load nvhpc/23.3
 + _module_raw load nvhpc/23.3
 ++ /usr/bin/tclsh8.6 /usr/lib/x86_64-linux-gnu/modulecmd.tcl bash load nvhpc/23.3
-+ eval
++ eval 'LD_LIBRARY_PATH=/home/share/nvidia/hpc_sdk/Linux_x86_64/23.3/comm_libs/nvshmem/lib:/home/share/nvidia/hpc_sdk/Linux_x86_64/23.3/comm_libs/nccl/lib:/home/share/nvidia/hpc_sdk/Linux_x86_64/23.3/comm_libs/mpi/lib:/home/share/nvidia/hpc_sdk/Linux_x86_64/23.3/math_libs/lib64:/home/share/nvidia/hpc_sdk/Linux_x86_64/23.3/compilers/lib:/home/share/nvidia/hpc_sdk/Linux_x86_64/23.3/compilers/extras/qd/lib:/home/share/nvidia/hpc_sdk/Linux_x86_64/23.3/cuda/extras/CUPTI/lib64:/home/share/nvidia/hpc_sdk/Linux_x86_64/23.3/cuda/lib64:/home/share/nvidia/cuda/12.0.0/open64/lib:/home/share/nvidia/cuda/12.0.0/targets/x86_64-linux/lib:/home/share/nvidia/cuda/12.0.0/lib64;' export 'LD_LIBRARY_PATH;' 'CPATH=/home/share/nvidia/hpc_sdk/Linux_x86_64/23.3/compilers/extras/qd/include/qd:/home/share/nvidia/hpc_sdk/Linux_x86_64/23.3/comm_libs/nvshmem/include:/home/share/nvidia/hpc_sdk/Linux_x86_64/23.3/comm_libs/nccl/include:/home/share/nvidia/hpc_sdk/Linux_x86_64/23.3/comm_libs/mpi/include:/home/share/nvidia/hpc_sdk/Linux_x86_64/23.3/math_libs/include:/home/share/nvidia/cuda/12.0.0/include;' export 'CPATH;' 'MANPATH=/home/share/nvidia/hpc_sdk/Linux_x86_64/23.3/compilers/man::;' export 'MANPATH;' '_LMFILES_=/home/share/modulefiles/cuda/12.0.0:/home/share/modulefiles/nvhpc/23.3;' export '_LMFILES_;' 'LOADEDMODULES=cuda/12.0.0:nvhpc/23.3;' export 'LOADEDMODULES;' 'NVHPC_ROOT=/home/share/nvidia/hpc_sdk/Linux_x86_64/23.3;' export 'NVHPC_ROOT;' 'CXX=/home/share/nvidia/hpc_sdk/Linux_x86_64/23.3/compilers/bin/nvc++;' export 'CXX;' 'CPP=cpp;' export 'CPP;' 'F90=/home/share/nvidia/hpc_sdk/Linux_x86_64/23.3/compilers/bin/nvfortran;' export 'F90;' '__MODULES_LMCONFLICT=nvhpc/23.3\&nvhpc\&nvhpc-nompi\&nvhpc-byo-compiler\&nvhpc-hpcx;' export '__MODULES_LMCONFLICT;' 'OPAL_PREFIX=/home/share/nvidia/hpc_sdk/Linux_x86_64/23.3/comm_libs/mpi;' export 'OPAL_PREFIX;' '__MODULES_SHARE_MANPATH=:1;' export '__MODULES_SHARE_MANPATH;' 'FC=/home/share/nvidia/hpc_sdk/Linux_x86_64/23.3/compilers/bin/nvfortran;' export 'FC;' 'F77=/home/share/nvidia/hpc_sdk/Linux_x86_64/23.3/compilers/bin/nvfortran;' export 'F77;' 'PATH=/home/share/nvidia/hpc_sdk/Linux_x86_64/23.3/compilers/extras/qd/bin:/home/share/nvidia/hpc_sdk/Linux_x86_64/23.3/comm_libs/mpi/bin:/home/share/nvidia/hpc_sdk/Linux_x86_64/23.3/compilers/bin:/home/share/nvidia/hpc_sdk/Linux_x86_64/23.3/cuda/bin:/home/share/nvidia/cuda/12.0.0/open64/bin:/home/share/nvidia/cuda/12.0.0/samples/bin/x86_64/linux/release:/home/share/nvidia/cuda/12.0.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin;' export 'PATH;' 'CC=/home/share/nvidia/hpc_sdk/Linux_x86_64/23.3/compilers/bin/nvc;' export 'CC;' 'NVHPC=/home/share/nvidia/hpc_sdk;' export 'NVHPC;' test '0;'
+++ LD_LIBRARY_PATH=/home/share/nvidia/hpc_sdk/Linux_x86_64/23.3/comm_libs/nvshmem/lib:/home/share/nvidia/hpc_sdk/Linux_x86_64/23.3/comm_libs/nccl/lib:/home/share/nvidia/hpc_sdk/Linux_x86_64/23.3/comm_libs/mpi/lib:/home/share/nvidia/hpc_sdk/Linux_x86_64/23.3/math_libs/lib64:/home/share/nvidia/hpc_sdk/Linux_x86_64/23.3/compilers/lib:/home/share/nvidia/hpc_sdk/Linux_x86_64/23.3/compilers/extras/qd/lib:/home/share/nvidia/hpc_sdk/Linux_x86_64/23.3/cuda/extras/CUPTI/lib64:/home/share/nvidia/hpc_sdk/Linux_x86_64/23.3/cuda/lib64:/home/share/nvidia/cuda/12.0.0/open64/lib:/home/share/nvidia/cuda/12.0.0/targets/x86_64-linux/lib:/home/share/nvidia/cuda/12.0.0/lib64
+++ export LD_LIBRARY_PATH
+++ CPATH=/home/share/nvidia/hpc_sdk/Linux_x86_64/23.3/compilers/extras/qd/include/qd:/home/share/nvidia/hpc_sdk/Linux_x86_64/23.3/comm_libs/nvshmem/include:/home/share/nvidia/hpc_sdk/Linux_x86_64/23.3/comm_libs/nccl/include:/home/share/nvidia/hpc_sdk/Linux_x86_64/23.3/comm_libs/mpi/include:/home/share/nvidia/hpc_sdk/Linux_x86_64/23.3/math_libs/include:/home/share/nvidia/cuda/12.0.0/include
+++ export CPATH
+++ MANPATH=/home/share/nvidia/hpc_sdk/Linux_x86_64/23.3/compilers/man::
+++ export MANPATH
+++ _LMFILES_=/home/share/modulefiles/cuda/12.0.0:/home/share/modulefiles/nvhpc/23.3
+++ export _LMFILES_
+++ LOADEDMODULES=cuda/12.0.0:nvhpc/23.3
+++ export LOADEDMODULES
+++ NVHPC_ROOT=/home/share/nvidia/hpc_sdk/Linux_x86_64/23.3
+++ export NVHPC_ROOT
+++ CXX=/home/share/nvidia/hpc_sdk/Linux_x86_64/23.3/compilers/bin/nvc++
+++ export CXX
+++ CPP=cpp
+++ export CPP
+++ F90=/home/share/nvidia/hpc_sdk/Linux_x86_64/23.3/compilers/bin/nvfortran
+++ export F90
+++ __MODULES_LMCONFLICT='nvhpc/23.3&nvhpc&nvhpc-nompi&nvhpc-byo-compiler&nvhpc-hpcx'
+++ export __MODULES_LMCONFLICT
+++ OPAL_PREFIX=/home/share/nvidia/hpc_sdk/Linux_x86_64/23.3/comm_libs/mpi
+++ export OPAL_PREFIX
+++ __MODULES_SHARE_MANPATH=:1
+++ export __MODULES_SHARE_MANPATH
+++ FC=/home/share/nvidia/hpc_sdk/Linux_x86_64/23.3/compilers/bin/nvfortran
+++ export FC
+++ F77=/home/share/nvidia/hpc_sdk/Linux_x86_64/23.3/compilers/bin/nvfortran
+++ export F77
+++ PATH=/home/share/nvidia/hpc_sdk/Linux_x86_64/23.3/compilers/extras/qd/bin:/home/share/nvidia/hpc_sdk/Linux_x86_64/23.3/comm_libs/mpi/bin:/home/share/nvidia/hpc_sdk/Linux_x86_64/23.3/compilers/bin:/home/share/nvidia/hpc_sdk/Linux_x86_64/23.3/cuda/bin:/home/share/nvidia/cuda/12.0.0/open64/bin:/home/share/nvidia/cuda/12.0.0/samples/bin/x86_64/linux/release:/home/share/nvidia/cuda/12.0.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+++ export PATH
+++ CC=/home/share/nvidia/hpc_sdk/Linux_x86_64/23.3/compilers/bin/nvc
+++ export CC
+++ NVHPC=/home/share/nvidia/hpc_sdk
+++ export NVHPC
+++ test 0
 + _mlstatus=0
 + return 0
-+ n=1000
-+ ./matmul_acc.elf 1000
-size = 1000
-332833536.000000 332334016.000000 331834496.000000 331335008.000000 330835488.000000 330336000.000000 329836480.000000 329336992.000000 328837504.000000 328337984.000000 
-333332992.000000 332832512.000000 332332032.000000 331831488.000000 331331008.000000 330830496.000000 330329984.000000 329829504.000000 329328992.000000 328828480.000000 
-333832512.000000 333331008.000000 332829504.000000 332328000.000000 331826496.000000 331324992.000000 330823520.000000 330321984.000000 329820480.000000 329319008.000000 
-334332032.000000 333829504.000000 333327008.000000 332824512.000000 332321984.000000 331819520.000000 331316992.000000 330814496.000000 330312000.000000 329809472.000000 
-334831488.000000 334328000.000000 333824512.000000 333320992.000000 332817536.000000 332313984.000000 331810496.000000 331307008.000000 330803488.000000 330300000.000000 
-335331008.000000 334826496.000000 334321984.000000 333817536.000000 333312992.000000 332808512.000000 332304000.000000 331799488.000000 331295008.000000 330790496.000000 
-335830496.000000 335324992.000000 334819520.000000 334313984.000000 333808512.000000 333303008.000000 332797504.000000 332292032.000000 331786496.000000 331280992.000000 
-336329984.000000 335823520.000000 335316992.000000 334810496.000000 334304000.000000 333797504.000000 333291008.000000 332784512.000000 332278016.000000 331771520.000000 
-336829504.000000 336321984.000000 335814496.000000 335307008.000000 334799488.000000 334292032.000000 333784512.000000 333276992.000000 332769536.000000 332262016.000000 
-337328992.000000 336820480.000000 336312000.000000 335803488.000000 335295008.000000 334786496.000000 334278016.000000 333769536.000000 333260992.000000 332752512.000000 
-size = 1000, time :1.892250 second
++ ./matmul_acc.elf 5000
+size = 5000
+41654165504.000000 41641668608.000000 41629171712.000000 41616674816.000000 41604177920.000000 41591676928.000000 41579184128.000000 41566683136.000000 41554190336.000000 41541689344.000000 
+41666666496.000000 41654161408.000000 41641660416.000000 41629155328.000000 41616654336.000000 41604153344.000000 41591652352.000000 41579151360.000000 41566646272.000000 41554141184.000000 
+41679163392.000000 41666658304.000000 41654149120.000000 41641639936.000000 41629134848.000000 41616625664.000000 41604120576.000000 41591611392.000000 41579102208.000000 41566597120.000000 
+41691660288.000000 41679147008.000000 41666633728.000000 41654124544.000000 41641611264.000000 41629097984.000000 41616584704.000000 41604071424.000000 41591562240.000000 41579053056.000000 
+41704157184.000000 41691639808.000000 41679126528.000000 41666609152.000000 41654087680.000000 41641570304.000000 41629048832.000000 41616535552.000000 41604022272.000000 41591496704.000000 
+41716654080.000000 41704136704.000000 41691611136.000000 41679089664.000000 41666568192.000000 41654042624.000000 41641521152.000000 41628999680.000000 41616474112.000000 41603952640.000000 
+41729155072.000000 41716621312.000000 41704099840.000000 41691570176.000000 41679044608.000000 41666514944.000000 41653989376.000000 41641459712.000000 41628934144.000000 41616404480.000000 
+41741647872.000000 41729118208.000000 41716584448.000000 41704054784.000000 41691521024.000000 41678991360.000000 41666453504.000000 41653923840.000000 41641390080.000000 41628852224.000000 
+41754148864.000000 41741606912.000000 41729073152.000000 41716531200.000000 41704001536.000000 41691459584.000000 41678921728.000000 41666387968.000000 41653846016.000000 41641312256.000000 
+41766641664.000000 41754099712.000000 41741557760.000000 41729019904.000000 41716473856.000000 41703931904.000000 41691389952.000000 41678848000.000000 41666306048.000000 41653760000.000000 
+size = 5000, time :7.385484 second
 + date
-Wed May 29 12:59:33 AM JST 2024
+Wed Jun 12 09:11:32 PM JST 2024

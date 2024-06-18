@@ -93,7 +93,9 @@ int main(int argc, char **argv) {
     double endTime = omp_get_wtime();
 
     //bool IsCorrect = compare(c,d,n);
-    printf("Size of matrix = %d, time = %f\n\n",n,endTime-startTime);
+    int timesOfOperation = n*n*(2*n-1);
+    double time = endTime-startTime;
+    printf("Size of matrix = %d, time = %f, TFLOPS = %f\n\n",n,time,timesOfOperation/time/1e12);
     
     //print part of matrix
     for (int i = 0; i < 10; i++) {  // print the first 10 rows and columns

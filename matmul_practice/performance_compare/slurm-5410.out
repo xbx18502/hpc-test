@@ -1,0 +1,105 @@
+Loading tbb version 2021.8.0
+
+Loading compiler/2024.0.2
+  Loading requirement: tbb/2021.8.0 compiler-rt/latest oclfpga/latest
+
+ERROR: Permission denied on '/home/share/intel/oneapi/modulefiles/mkl/2024.0'
+Loading modulefiles version 2021.11
+vtune: Warning: Microarchitecture performance insights will not be available. Make sure the sampling driver is installed and enabled on your system.
+vtune: Collection started. To stop the collection, either press CTRL-C or enter from another console window: vtune -r /home/xiao/hpc test/matmul_practice/performance_compare/result_5410_ -command stop.
+size = 1000
+MPI startup(): PMI server not found. Please set I_MPI_PMI_LIBRARY variable if it is not a singleton case.
+Size of matrix = 1000, time = 0.393506
+
+332833500.00 332334000.00 331834500.00 331335000.00 330835500.00 330336000.00 329836500.00 329337000.00 328837500.00 328338000.00 
+333333000.00 332832500.00 332332000.00 331831500.00 331331000.00 330830500.00 330330000.00 329829500.00 329329000.00 328828500.00 
+333832500.00 333331000.00 332829500.00 332328000.00 331826500.00 331325000.00 330823500.00 330322000.00 329820500.00 329319000.00 
+334332000.00 333829500.00 333327000.00 332824500.00 332322000.00 331819500.00 331317000.00 330814500.00 330312000.00 329809500.00 
+334831500.00 334328000.00 333824500.00 333321000.00 332817500.00 332314000.00 331810500.00 331307000.00 330803500.00 330300000.00 
+335331000.00 334826500.00 334322000.00 333817500.00 333313000.00 332808500.00 332304000.00 331799500.00 331295000.00 330790500.00 
+335830500.00 335325000.00 334819500.00 334314000.00 333808500.00 333303000.00 332797500.00 332292000.00 331786500.00 331281000.00 
+336330000.00 335823500.00 335317000.00 334810500.00 334304000.00 333797500.00 333291000.00 332784500.00 332278000.00 331771500.00 
+336829500.00 336322000.00 335814500.00 335307000.00 334799500.00 334292000.00 333784500.00 333277000.00 332769500.00 332262000.00 
+337329000.00 336820500.00 336312000.00 335803500.00 335295000.00 334786500.00 334278000.00 333769500.00 333261000.00 332752500.00 
+vtune: Collection stopped.
+vtune: Using result path `/home/xiao/hpc test/matmul_practice/performance_compare/result_5410_'
+vtune: Executing actions  0 %                                                  vtune: Executing actions  0 % Finalizing results                               vtune: Executing actions  0 % Finalizing the result                            vtune: Executing actions  0 % Clearing the database                            vtune: Executing actions  7 % Clearing the database                            vtune: Executing actions  7 % Loading raw data to the database                 vtune: Executing actions  7 % Loading 'systemcollector-466091-photon.sc' file  vtune: Executing actions 12 % Loading 'systemcollector-466091-photon.sc' file  vtune: Executing actions 12 % Loading '466091-466096.0.trace' file             vtune: Executing actions 12 % Loading 'userapicollector-466096-75f88c0a.trace' vtune: Executing actions 12 % Updating precomputed scalar metrics              vtune: Executing actions 14 % Updating precomputed scalar metrics              vtune: Executing actions 14 % Processing profile metrics and debug information vtune: Executing actions 19 % Processing profile metrics and debug information vtune: Executing actions 19 % Setting data model parameters                    vtune: Executing actions 19 % Resolving module symbols                         vtune: Executing actions 19 % Resolving information for dangling locations     vtune: Executing actions 19 % Resolving information for `matmul_omp_mpi.elf'   vtune: Executing actions 19 % Resolving information for `libtcp-fi.so'         vtune: Executing actions 19 % Resolving information for `libfabric.so.1'       vtune: Executing actions 19 % Resolving information for `libverbs-1.12-fi.so'  vtune: Executing actions 19 % Resolving information for `librxm-fi.so'         
+vtune: Warning: Cannot locate debugging information for file `/home/share/intel/oneapi/mpi/2021.11/opt/mpi/libfabric/lib/prov/libtcp-fi.so'.
+vtune: Warning: Cannot locate debugging information for file `/home/share/intel/oneapi/mpi/2021.11/opt/mpi/libfabric/lib/libfabric.so.1'.
+vtune: Warning: Cannot locate debugging information for file `/home/share/intel/oneapi/mpi/2021.11/opt/mpi/libfabric/lib/prov/libverbs-1.12-fi.so'.
+vtune: Warning: Cannot locate debugging information for file `/home/share/intel/oneapi/mpi/2021.11/opt/mpi/libfabric/lib/prov/librxm-fi.so'.
+vtune: Executing actions 19 % Resolving information for `libittnotify_collectorvtune: Executing actions 19 % Resolving information for `libc.so.6'            
+vtune: Warning: Cannot locate debugging information for file `/home/share/intel/oneapi/vtune/2024.0/lib64/runtime/libittnotify_collector.so'.
+vtune: Executing actions 19 % Resolving information for `libc-dynamic.so'      vtune: Executing actions 20 % Resolving information for `libc-dynamic.so'      vtune: Executing actions 20 % Resolving information for `ld-linux-x86-64.so.2' vtune: Executing actions 20 % Resolving information for `pinbin'               vtune: Executing actions 20 % Resolving information for `libc++.so'            vtune: Executing actions 20 % Resolving information for `libc++abi.so'         vtune: Executing actions 21 % Resolving information for `libc++abi.so'         vtune: Executing actions 21 % Resolving information for `libtpsstool.so'       
+vtune: Warning: Cannot locate debugging information for file `/home/share/intel/oneapi/vtune/2024.0/lib64/libtpsstool.so'.
+vtune: Executing actions 21 % Resolving information for `libiomp5.so'          vtune: Executing actions 22 % Resolving information for `libiomp5.so'          
+vtune: Warning: Cannot locate debugging information for file `/home/share/intel/oneapi/compiler/2024.0/lib/libiomp5.so'.
+Cannot match the module with the symbol file `/home/share/intel/oneapi/compiler/2024.0/lib/libiomp5.dbg'. Make sure to specify the correct path to the symbol file in the Binary/Symbol Search list of directories.
+vtune: Executing actions 22 % Resolving information for `libmpi.so.12'         vtune: Executing actions 22 % Resolving bottom user stack information          vtune: Executing actions 23 % Resolving bottom user stack information          vtune: Executing actions 23 % Resolving thread name information                vtune: Executing actions 24 % Resolving thread name information                vtune: Executing actions 24 % Resolving call target names for dynamic code     vtune: Executing actions 25 % Resolving call target names for dynamic code     vtune: Executing actions 25 % Resolving interrupt name information             vtune: Executing actions 26 % Resolving interrupt name information             vtune: Executing actions 26 % Processing profile metrics and debug information vtune: Executing actions 28 % Processing profile metrics and debug information vtune: Executing actions 29 % Processing profile metrics and debug information vtune: Executing actions 30 % Processing profile metrics and debug information vtune: Executing actions 30 % Setting data model parameters                    vtune: Executing actions 30 % Precomputing frequently used data                vtune: Executing actions 30 % Precomputing frequently used data                vtune: Executing actions 31 % Precomputing frequently used data                vtune: Executing actions 33 % Precomputing frequently used data                vtune: Executing actions 34 % Precomputing frequently used data                vtune: Executing actions 36 % Precomputing frequently used data                vtune: Executing actions 36 % Updating precomputed scalar metrics              vtune: Executing actions 37 % Updating precomputed scalar metrics              vtune: Executing actions 37 % Discarding redundant overtime data               vtune: Executing actions 39 % Discarding redundant overtime data               vtune: Executing actions 39 % Saving the result                                vtune: Executing actions 41 % Saving the result                                vtune: Executing actions 42 % Saving the result                                vtune: Executing actions 50 % Saving the result                                vtune: Executing actions 50 % Generating a report                              vtune: Executing actions 50 % Setting data model parameters                    vtune: Executing actions 75 % Setting data model parameters                    vtune: Executing actions 75 % Generating a report                              Elapsed Time: 1.610s
+    CPU Time: 6.570s
+        Effective Time: 5.286s
+        Spin Time: 1.268s
+         | A significant portion of CPU time is spent waiting. Use this metric
+         | to discover which synchronizations are spinning. Consider adjusting
+         | spin wait parameters, changing the lock implementation (for example,
+         | by backing off then descheduling), or adjusting the synchronization
+         | granularity.
+         |
+            Imbalance or Serial Spinning: 1.170s
+             | The threading runtime function related to time spent on imbalance
+             | or serial spinning consumed a significant amount of CPU time.
+             | This can be caused by a load imbalance, insufficient concurrency
+             | for all working threads, or busy waits of worker threads while
+             | serial code is executed. If there is an imbalance, apply dynamic
+             | work scheduling or reduce the size of work chunks or tasks. If
+             | there is insufficient concurrency, consider collapsing the outer
+             | and inner loops. If there is a wait for completion of serial
+             | code, explore options for parallelization with Intel Advisor,
+             | algorithm, or microarchitecture tuning of the application's
+             | serial code with VTune Profiler Basic Hotspots or
+             | Microarchitecture Exploration analysis respectively. For OpenMP*
+             | applications, use the Per-Barrier OpenMP Potential Gain metric
+             | set in the HPC Performance Characterization analysis to discover
+             | the reason for high imbalance or serial spin time.
+             |
+            Lock Contention: 0s
+            Other: 0.098s
+        Overhead Time: 0.016s
+            Creation: 0.016s
+            Scheduling: 0s
+            Reduction: 0s
+            Atomics: 0s
+            Other: 0s
+    Total Thread Count: 24
+    Paused Time: 0s
+
+Top Hotspots
+Function            Module              CPU Time  % of CPU Time(%)
+------------------  ------------------  --------  ----------------
+matrix_multiply     matmul_omp_mpi.elf    5.126s             78.0%
+__kmp_fork_barrier  libiomp5.so           1.248s             19.0%
+__GI___getdelim     libc.so.6             0.082s              1.2%
+___dlopen           libc.so.6             0.020s              0.3%
+__kmp_join_barrier  libiomp5.so           0.020s              0.3%
+[Others]            N/A                   0.074s              1.1%
+Collection and Platform Info
+    Application Command Line: ./matmul_omp_mpi.elf "1000" 
+    Operating System: 5.15.0-94-generic DISTRIB_ID=Ubuntu DISTRIB_RELEASE=22.04 DISTRIB_CODENAME=jammy DISTRIB_DESCRIPTION="Ubuntu 22.04.4 LTS"
+    Computer Name: photon
+    Result Size: 4.5 MB 
+    Collection start time: 01:15:44 03/06/2024 UTC
+    Collection stop time: 01:15:47 03/06/2024 UTC
+    Collector Type: User-mode sampling and tracing
+    CPU
+        Name: Unknown
+        Frequency: 3.693 GHz
+        Logical CPU Count: 24
+        Cache Allocation Technology
+            Level 2 capability: not detected
+            Level 3 capability: available
+
+If you want to skip descriptions of detected performance issues in the report,
+enter: vtune -report summary -report-knob show-issues=false -r <my_result_dir>.
+Alternatively, you may view the report in the csv format: vtune -report
+<report_name> -format=csv.
+vtune: Executing actions 100 % Generating a report                             vtune: Executing actions 100 % done                                            

@@ -34,10 +34,11 @@ int main(int argc, char **argv) {
     cudaMemcpy(d_B, B, size, cudaMemcpyHostToDevice);
 
     cublasCreate(&handle);
-
+    cudaDeviceSynchronize();
     clock_t start = clock();
     //  C = alpha * A * B + beta * C
     cublasSgemm(handle, CUBLAS_OP_T, CUBLAS_OP_T, n, n, n, &alpha, d_A, n, d_B, n, &beta, d_C, n);
+    cudaDeviceSynchronize();
     clock_t end = clock();
     // copy result back to host
     cudaMemcpy(C, d_C, size, cudaMemcpyDeviceToHost);
